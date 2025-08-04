@@ -146,4 +146,18 @@ Run tests with:
 - `spring-boot-starter-data-mongodb`: MongoDB integration
 - `spring-boot-devtools`: Development tools
 - `lombok`: Reduces boilerplate code
-- `spring-dotenv`: Environment variable support 
+- `spring-dotenv`: Environment variable support
+
+## 📄 Licence
+
+This project is licenced under MIT Licence
+
+## Author
+
+**byiringiro-aloys** - [GitHub Profile]
+
+--
+
+For more information or support, please open an issue in the repository.
+
+

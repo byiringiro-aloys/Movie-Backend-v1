@@ -1,5 +1,6 @@
 package dev.aloys.Movies.service;
 
+import com.mongodb.client.MongoDatabase;
 import dev.aloys.Movies.model.Movies;
 import dev.aloys.Movies.model.Reviews;
 import dev.aloys.Movies.repository.ReviewRepository;
@@ -27,7 +28,6 @@ public class ReviewService {
                 .matching(Criteria.where("imdbId").is(imdbId))
                 .apply(new Update().push("reviewIds").value(review))
                 .first();
-
         return review;
     }
 

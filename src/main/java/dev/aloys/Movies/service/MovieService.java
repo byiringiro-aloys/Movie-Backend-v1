@@ -2,7 +2,6 @@ package dev.aloys.Movies.service;
 
 import dev.aloys.Movies.model.Movies;
 import dev.aloys.Movies.repository.MoviesRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,5 +15,9 @@ public class MovieService {
 
     public List<Movies> allMovies(){
         return moviesRepository.findAll();
+    }
+
+    public Movies getMovieById(String id){
+        return moviesRepository.findMovieByImdbId(id).orElse(null);
     }
 }

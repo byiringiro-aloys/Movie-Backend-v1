@@ -11,6 +11,8 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ReviewService {
     private ReviewRepository reviewRepository;
@@ -32,4 +34,7 @@ public class ReviewService {
     }
 
 
+    public List<Reviews> getAllReviews() {
+        return reviewRepository.findAll();
+    }
 }

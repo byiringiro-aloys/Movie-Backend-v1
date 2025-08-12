@@ -55,10 +55,10 @@ src/main/java/dev/aloys/Movies/
 ### Environment Setup
 
 Create a `.env` file with:
-```env
-MONGO_URI=your_mongodb_connection_string
-MONGO_DATABASE=your_database_name
-```
+   ```env
+   MONGO_URI=your_mongodb_connection_string
+   MONGO_DATABASE=your_database_name
+   ```
 
 ### Installation
 

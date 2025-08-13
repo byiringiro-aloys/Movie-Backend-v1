@@ -1,0 +1,30 @@
+package dev.aloys.Movie_backend.controller;
+
+import dev.aloys.Movie_backend.model.Movies;
+import dev.aloys.Movie_backend.service.MovieService;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/api/v1/movies")
+public class MoviesController {
+
+    private MovieService movieService;
+
+    public MoviesController(MovieService movieService) {
+        this.movieService = movieService;
+    }
+
+    @GetMapping
+    public ResponseEntity<List<Movies>> getAllMovies(){
+        return new ResponseEntity<>(movieService.allMovies(), HttpStatus.OK);
+    }
+
+    @GetMapping("/{imdbId}")
+    public ResponseEntity<Movies> getMovieByImdbId(@PathVariable String imdbId){
+        return new ResponseEntity<>(movieService.getMovieById(imdbId),HttpStatus.OK);
+    }
+}
